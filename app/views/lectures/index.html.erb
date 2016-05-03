@@ -1,0 +1,37 @@
+<div class="center-xs around-xs">
+ 
+  <% if asesor_signed_in? %>
+   <div class="button blue medium ">
+     <a href="https://asesoriasbases-aletarin10.c9users.io/lectures/new">Nueva Asesoria</a>
+    </div>
+  <%end%>
+
+<% @lecture.each do |lectures| %>
+    </br>
+    <h4><%= link_to lectures.title, lectures %></h4>
+    <p><%= lectures.hour_start.strftime(" Hora de Inicio: %I:%M ")%></p>
+    <div>
+    <p><%= lectures.hour_end.strftime(" A: %I:%M ") %></p>
+    </div>
+    <div>
+     <p>Asesor: <%= link_to lectures.asesor.name, lectures.asesor%></p>
+     <p><%= lectures.date_lecture %></p>
+    </div>
+    <div>
+     <p><%= lectures.place %></p>
+    </div>
+    <div>
+     <p><%="Costo por hora: $"+ lectures.cost_per_hour.to_s %></p>
+    </div>
+    
+    <% if asesor_signed_in? %>
+    <div class="button blue small ">
+     <%= link_to "Editar",edit_lecture_path(lectures) %>
+    </div>
+    <div class="button blue small ">
+     <%= link_to "Eliminar", lectures, method: :delete %>
+    </div>
+    <%end%>
+    
+<%end%>
+ </div>   

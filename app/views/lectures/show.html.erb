@@ -1,0 +1,29 @@
+    <div class="center-xs around-xs">
+        
+        <h4><%= @lecture.title %></h4>
+        <p><%= @lecture.hour_start.strftime(" Inicio: %I:%M ") %></p>
+        <p><%= @lecture.hour_end.strftime(" A: %I:%M ") %></p>
+        <p><%=@lecture.date_lecture %> </p>
+        <p><%=@lecture.place %></p>
+        <p><%="Tutor:" +  @lecture.asesor.name %></p>
+        <p><%="Costo por hora: $:" + @lecture.cost_per_hour.to_s %></p>
+        
+        <h3>Registrate, pregunta y califica esta asesoria</h3>
+        <%= render "students/form" %>
+        
+        
+      
+        <ul class=text-left>
+              <h3>Comentarios sobre esta asesoria</h3>
+            <% @lecture.students.each do |student| %>
+            <li class="sinpunto", id ="students-box">
+                <h4>Estudiante: <%= student.student %></h4>
+                <p>Calificacion: <%= student.valoration %> </p>
+                <p><%= student.body %></p>
+                <br>
+            </li>
+            <%end%>
+        </ul>
+    
+    </div>
+        

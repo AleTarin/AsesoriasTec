@@ -1,0 +1,28 @@
+<div class="center-xs around-xs">
+        <h3>Informacion :</h3>
+        </br>
+        <h4><%=@asesors.name %></h4>
+        <p><%=@asesors.email %> </p>
+        <div class="field">
+            <%= image_tag @asesors.identification.url(:thumb) %>
+        </div>
+        
+        </br>
+        
+        <h3>Asesorias activas</h3>
+        
+         <ul>
+            <% @asesors.lectures.each do |lecture| %>
+            <li class= "sinpunto"
+                <h4><%= lecture.title %></h4>
+                <p><%= lecture.hour_start.strftime(" Inicio: %I:%M ") %></p>
+                <p><%= lecture.hour_end.strftime(" A: %I:%M ") %></p>
+                <p><%= lecture.date_lecture %> </p>
+                <p><%= lecture.place %></p>
+                <p><%="Costo por hora: $:" + lecture.cost_per_hour.to_s %></p>
+            </li>
+            <%end%>
+        </ul>
+        
+        
+</div>

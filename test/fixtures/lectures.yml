@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hour_end: 2016-04-20 21:56:29
+  hour_start: 2016-04-20 21:56:29
+  place: MyString
+  date_lecture: 2016-04-20
+  cost_per_hour: 1
+
+two:
+  hour_end: 2016-04-20 21:56:29
+  hour_start: 2016-04-20 21:56:29
+  place: MyString
+  date_lecture: 2016-04-20
+  cost_per_hour: 1

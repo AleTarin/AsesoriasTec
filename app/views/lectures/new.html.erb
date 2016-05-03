@@ -1,0 +1,37 @@
+<div class="caja-mediana">
+    <h1>Agregar nueva asesoria</h1>
+<%= form_for(@lecture) do |f| %>
+    <div class="field">
+        <%= f.text_field :title, placeholder:"Titulo informativo de la asesoria", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_field :hour_start, placeholder:"Hora de inicio, formato (HH:MM)", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_field :hour_end, placeholder:"Hora en la cual se termina, formato (HH:MM)", class:"form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.text_field :date_lecture, placeholder:"Dia de la asesoria", class:"form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.text_field :place, placeholder:"Lugar de reunion para la asesoria", class:"form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.text_field :cost_per_hour, placeholder:"Costo por hora de la clase", class:"form-control" %>
+    </div>
+    </br>
+     <% @lecture.errors.full_messages.each do |message| %>
+        <div class= "be-blue white top-space">
+            *<%=message %>
+        </div>
+    <%end%>
+    </br>
+     <div class="field">
+         <%= f.submit "Guardar", class:"boton be-blue white medium-padding" %>
+     </div>
+     </br>
+<%end%>
+</div>

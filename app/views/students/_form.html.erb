@@ -1,0 +1,30 @@
+<div class="caja-mediana">
+<%= form_for([@lecture,@student], remote: "true", html: {id: "students-form", :"data-type"=>"json"}) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <br>
+    <%= f.text_field :student, placeholder:"Student name", class:"form-control" %>
+  </div>
+  <div class="field">
+    <br>
+    <%= f.number_field :valoration, placeholder:"Calificacion a la asesoria (de 0 a 5)", class:"form-control" %>
+  </div>
+  <div class="field"><br>
+    <%= f.text_area :body, placeholder:"Comentario", class:"form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "commentar", class:"button blue small" %>
+  </div>
+<% end %>
+</div>

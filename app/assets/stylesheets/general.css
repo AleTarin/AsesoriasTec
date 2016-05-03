@@ -1,0 +1,87 @@
+html,body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+a:link ,a:visited {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.boton{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sinpunto {
+    list-style: none;
+    margin: 20px;
+  }
+  
+.be-blue{
+    background-color: rgb(58,73,205);
+}
+
+.white{
+    color: white;
+}
+
+.medium-padding{
+    padding: 8px 7px;
+}
+
+.medium-font{
+    font-size:  20px;
+}
+
+.no-margin{
+    margin: 0px;
+}
+
+#logo{
+    font-size: 1.4em;
+}
+
+.form-control{
+    border:none;
+    border-bottom: 1px solid;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+
+.caja-completa{
+    width:80%;
+    margin: 0 auto;
+}
+
+.caja-mediana{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.top-space{
+    margin-top: .5em;
+}
+
+.bottom-space{
+    margin-bottom: .5em;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.text-left{
+    text-align: left;
+}

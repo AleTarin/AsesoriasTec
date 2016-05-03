@@ -1,0 +1,17 @@
+<div class="caja-mediana">
+    <h1>Agregar nuevo asesor</h1>
+<%= form_for(@asesor) do |f| %>
+    <div class="field">
+        <%= f.text_field :name, placeholder:"Nombre", class:"form-control" %>
+    </div>
+    
+     <div class="field">
+         Identificacion: <%= f.file_fild :identificacion %>
+     </div>
+     </br>
+     <div class="field">
+         <%= f.submit "Guardar", class:"boton be-blue white medium-padding" %>
+     </div>
+     </br>
+<%end%>
+</div>
