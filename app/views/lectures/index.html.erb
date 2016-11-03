@@ -24,14 +24,5 @@
      <p><%="Costo por hora: $"+ lectures.cost_per_hour.to_s %></p>
     </div>
     
-    <% if asesor_signed_in? %>
-    <div class="button blue small ">
-     <%= link_to "Editar",edit_lecture_path(lectures) %>
-    </div>
-    <div class="button blue small ">
-     <%= link_to "Eliminar", lectures, method: :delete %>
-    </div>
-    <%end%>
-    
 <%end%>
  </div>   

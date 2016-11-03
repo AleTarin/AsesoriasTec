@@ -23,7 +23,7 @@ a:link ,a:visited {
   }
   
 .be-blue{
-    background-color: rgb(58,73,205);
+    background-color: rgb(55,90,127);
 }
 
 .white{
@@ -31,7 +31,7 @@ a:link ,a:visited {
 }
 
 .medium-padding{
-    padding: 8px 7px;
+    padding: 5px 5px;
 }
 
 .medium-font{

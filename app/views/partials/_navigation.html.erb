@@ -1,30 +1,38 @@
     <header>
-        
+       
+    
       <nav class="be-blue white medium-padding medium-font">
+        
         <ul class="sinpunto row center-xs around-xs middle-xs">
-          <li class= "col-md" id="logo">
-            <%= link_to "Asesorias Tec", root_path %>
+          
+          
+          
+          <li id="logo">
+                <%= link_to image_tag("/assets/Button.png",  :width => "100%"), root_path %>
+            
           </li>
           
-          <li class="col-md", href>
+        
+          
+          <li href>
              <a href="https://asesoriasbases-aletarin10.c9users.io/asesors">Asesores</a>
           </li>
           
-          <li class="col-md">
+          <li>
              <a href="https://asesoriasbases-aletarin10.c9users.io/lectures">Asesorias</a>
           </li>
           
           <% if asesor_signed_in? %>
-          <li class="col-md">
+          <li>
             <%= link_to "Cerrar Sesión", destroy_asesor_session_path, method: :delete %>
           </li>
           
           <%else%>
-            <li class="col-md">
+            <li>
               <%= link_to "Iniciar Sesión", new_asesor_session_path %>
             </li>
             
-            <li class="col-md">
+            <li>
               <%= link_to "Crear cuenta", new_asesor_registration_path %>
             </li>
           <%end%>
@@ -32,5 +40,7 @@
           </br>
         </ul>
       </nav>
+      
+      
       
     </header>

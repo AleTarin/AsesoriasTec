@@ -1,4 +1,4 @@
-<div class="center-xs around-xs">
+<div class="center-xs around-xs" >
         <h3>Informacion :</h3>
         </br>
         <h4><%=@asesors.name %></h4>
@@ -11,18 +11,25 @@
         
         <h3>Asesorias activas</h3>
         
-         <ul>
+        
             <% @asesors.lectures.each do |lecture| %>
-            <li class= "sinpunto"
-                <h4><%= lecture.title %></h4>
+            <li class= "sinpunto" 
+                <h4><%= link_to lecture.title, lecture %></h4>
                 <p><%= lecture.hour_start.strftime(" Inicio: %I:%M ") %></p>
                 <p><%= lecture.hour_end.strftime(" A: %I:%M ") %></p>
                 <p><%= lecture.date_lecture %> </p>
                 <p><%= lecture.place %></p>
                 <p><%="Costo por hora: $:" + lecture.cost_per_hour.to_s %></p>
             </li>
+            
+            
+                    <% if asesor_signed_in? and current_asesor.name == @asesors.name%>
+                    <div class="button blue small ">
+                     <%= link_to "Editar",edit_lecture_path(lecture) %>
+                            </div>
+                    <div class="button blue small ">
+                     <%= link_to "Eliminar", lecture, method: :delete %>
+                    </div>
+                    <%end%>
+            
             <%end%>
-        </ul>
-        
-        
-</div>
